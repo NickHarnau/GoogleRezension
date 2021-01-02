@@ -2,7 +2,7 @@ import time
 import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
-from  Objects import *
+from Objects import *
 import pandas as pd
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
@@ -19,20 +19,24 @@ driver.find_element_by_id(ID).click()
 driver.switch_to.default_content()
 
 #try to get all class name and then scroll to the last one - this makes the website automatic scrolling and loading some more reviewse
-x_new = 0
-new_middle = "Start"
+# initialize // can be done way better - ok for start
+x_old = 0
+all_elements = driver.find_elements_by_class_name("jxjCjc")
+x_new = len(all_elements)
+
 while x_new < 598:
-    x_old = x_new # wie bekomme ich das dauerhafte scrollen hin gepaart mit abrechen, wenn es keine veränderung mehr kommt / mit manuelle neu ausführen passt das
-    all_elements = driver.find_elements_by_class_name("jxjCjc")
-    all_elements[-1].location_once_scrolled_into_view
-    new_middle = all_elements[-1]
-    x_new = len(all_elements)
-    if x_new == x_old:
+    if x_new > x_old:
+        x_old = len(all_elements)
+        print(x_old)
+        # wie bekomme ich das dauerhafte scrollen hin gepaart mit abrechen, wenn es keine veränderung mehr kommt / mit manuelle neu ausführen passt das
+        all_elements[-1].location_once_scrolled_into_view
+        time.sleep(2)
+        all_elements = driver.find_elements_by_class_name("jxjCjc")
+        time.sleep(2)
+        x_new = len(all_elements)
+        print(x_new)
+    else:
         break
-
-
-
-
 
 
 
@@ -63,38 +67,6 @@ for entry in entry_list:
 
 df_google = pd.DataFrame([vars(f) for f in entries_list])
 
-wait = WebDriverWait(driver,10)
-x=0
-desiredReviewsCount=30
-wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME,"jxjCjc")))
-while x<desiredReviewsCount:
-    driver.find_elements_by_class_name("jxjCjc")
-    x = len(driver.find_elements_by_class_name("jxjCjc"))
-
-print(len(driver.find_elements_by_class_name("jxjCjc")))
 
 
-
-SCROLL_PAUSE_TIME = 0.5
-
-# Get scroll height
-last_height = driver.execute_script("return document.body.scrollHeight")
-
-while True:
-    # Scroll down to bottom
-    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-
-    # Wait to load page
-    time.sleep(SCROLL_PAUSE_TIME)
-
-    # Calculate new scroll height and compare with last scroll height
-    new_height = driver.execute_script("return document.body.scrollHeight")
-    if new_height == last_height:
-        break
-    last_height = new_height
-
-
-
-## next step: scrollen hinbekommen bzw. wie komme ich an alle Kommentare?
-#Idee: immer alles in eine Liste packen und dann zum letzten element scrollen
 
