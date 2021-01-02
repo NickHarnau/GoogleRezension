@@ -1,13 +1,9 @@
 import time
-import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from Objects import *
 import pandas as pd
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
+
 
 driver = webdriver.Firefox()
 url = "https://www.google.com/search?client=firefox-b-d&q=naturkundemuseum+leipzig#lrd=0x47a6f82003be7a73:0x3f22dbe589345cb2,1,,,"
@@ -21,7 +17,7 @@ driver.switch_to.default_content()
 #try to get all class name and then scroll to the last one - this makes the website automatic scrolling and loading some more reviewse
 # initialize // can be done way better - ok for start
 x_old = 0
-all_elements = driver.find_elements_by_class_name("jxjCjc")
+all_elements = driver.find_elements_by_class_name("QWOdjf") # get all the like button who can be scraped and save them in list
 x_new = len(all_elements)
 
 while x_new < 598:
@@ -30,9 +26,8 @@ while x_new < 598:
         print(x_old)
         # wie bekomme ich das dauerhafte scrollen hin gepaart mit abrechen, wenn es keine veränderung mehr kommt / mit manuelle neu ausführen passt das
         all_elements[-1].location_once_scrolled_into_view
-        time.sleep(2)
-        all_elements = driver.find_elements_by_class_name("jxjCjc")
-        time.sleep(2)
+        time.sleep(4)
+        all_elements = driver.find_elements_by_class_name("QWOdjf")
         x_new = len(all_elements)
         print(x_new)
     else:
@@ -67,6 +62,30 @@ for entry in entry_list:
 
 df_google = pd.DataFrame([vars(f) for f in entries_list])
 
+
+"""
+while x_new < 598:
+    if x_new > x_old:
+        x_old = len(all_elements) # update x_old
+        print(x_old)
+        all_elements[-1].location_once_scrolled_into_view # scroll until the last like button is visible
+        time.sleep(4)
+        all_elements = driver.find_elements_by_class_name("QWOdjf") # get all like buttons again
+        x_new = len(all_elements)
+        print(x_new)
+    else:
+        # maybe if clause is not working in some cases - try with name (e.g. when someone does not write a text or send picture)
+        x_old = len(all_elements)
+        print(x_old)
+        all_elements = driver.find_elements_by_class_name("jxjCjc") # get all names as list
+        all_elements[-1].location_once_scrolled_into_view # scroll to last name in list until it is visible
+        time.sleep(4)
+        all_elements = driver.find_elements_by_class_name("jxjCjc")
+        x_new = len(all_elements)
+        print(x_new)
+        if x_new == x_old: #
+            break
+"""
 
 
 
