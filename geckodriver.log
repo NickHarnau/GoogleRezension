@@ -1881,3 +1881,64 @@ JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't fin
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
 1609620227065	Marionette	INFO	Listening on port 55767
 1609620227379	Marionette	WARN	TLS certificate errors will be ignored for this session
+1609621234758	Marionette	INFO	Stopped listening on port 55767
+1609621398430	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Nick\\AppData\\Local\\Temp\\rust_mozprofile0cI6qW"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609621404408	Marionette	INFO	Listening on port 56063
+1609621404724	Marionette	WARN	TLS certificate errors will be ignored for this session
+1609621543669	Marionette	INFO	Stopped listening on port 56063
+1609621554387	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Nick\\AppData\\Local\\Temp\\rust_mozprofileZdxiO5"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609621561120	Marionette	INFO	Listening on port 56155
+1609621561298	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.warn: "Async method failed in safeAsyncMethod" (new Error("Connection closed, pending request to server0.conn0.child3/domwalker25, type cancelPick failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:288:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\ncancelPick@resource://devtools/client/fronts/walker.js:617:18\nexports.safeAsyncMethod/<@resource://devtools/shared/async-utils.js:57:25\n_onInspectorFrontDestroyed@resource://devtools/client/inspector/node-picker.js:112:18\n_emit@resource://devtools/shared/event-emitter.js:226:34\nemit@resource://devtools/shared/event-emitter.js:172:18\nemit@resource://devtools/shared/event-emitter.js:324:18\nunmanage@resource://devtools/shared/protocol/Front.js:168:37\ndestroy@resource://devtools/shared/protocol/Pool.js:167:14\nbaseFrontClassDestroy@resource://devtools/shared/protocol/Front.js:103:13\ndestroy@resource://devtools/shared/protocol/Front.js:67:10\ndestroy@resource://devtools/client/fronts/inspector.js:96:11\n_destroyTarget@resource://devtools/client/fronts/targets/target-mixin.js:604:17\n", "resource://devtools/shared/protocol/Front.js", 99))
+1609622572740	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Nick\\AppData\\Local\\Temp\\rust_mozprofile7IYaan"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609622579062	Marionette	INFO	Listening on port 56423
+1609622579190	Marionette	WARN	TLS certificate errors will be ignored for this session
+1609623004399	Marionette	INFO	Stopped listening on port 56423
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1609623075995	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Nick\\AppData\\Local\\Temp\\rust_mozprofileGd0vra"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609623081805	Marionette	INFO	Listening on port 63500
+1609623082368	Marionette	WARN	TLS certificate errors will be ignored for this session
+1609623225877	Marionette	INFO	Stopped listening on port 63500
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1609623230735	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Nick\\AppData\\Local\\Temp\\rust_mozprofilef8ZOhd"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609623236525	Marionette	INFO	Listening on port 63600
+1609623237122	Marionette	WARN	TLS certificate errors will be ignored for this session
+1609623379505	Marionette	INFO	Stopped listening on port 63600
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1610902035616	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Nick\\AppData\\Local\\Temp\\rust_mozprofileHyaRrM"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610902039773	Marionette	INFO	Listening on port 54533
+1610902039890	Marionette	WARN	TLS certificate errors will be ignored for this session
+1610902204472	Marionette	INFO	Stopped listening on port 54533
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

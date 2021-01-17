@@ -22,12 +22,11 @@ x_new = len(all_elements)
 
 while x_new < 598:
     if x_new > x_old:
-        x_old = len(all_elements)
+        x_old = len(all_elements) #update x_old
         print(x_old)
-        # wie bekomme ich das dauerhafte scrollen hin gepaart mit abrechen, wenn es keine veränderung mehr kommt / mit manuelle neu ausführen passt das
-        all_elements[-1].location_once_scrolled_into_view
+        all_elements[-1].location_once_scrolled_into_view # scroll until the last like button is visible
         time.sleep(4)
-        all_elements = driver.find_elements_by_class_name("QWOdjf")
+        all_elements = driver.find_elements_by_class_name("QWOdjf") # get all like buttons again
         x_new = len(all_elements)
         print(x_new)
     else:
@@ -74,7 +73,7 @@ while x_new < 598:
         x_new = len(all_elements)
         print(x_new)
     else:
-        # maybe if clause is not working in some cases - try with name (e.g. when someone does not write a text or send picture)
+        # maybe if clause is not working in some cases - try with name (e.g. when someone does not write a text or send only picture)
         x_old = len(all_elements)
         print(x_old)
         all_elements = driver.find_elements_by_class_name("jxjCjc") # get all names as list
